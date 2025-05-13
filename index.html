@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和玛露西尔一起专注</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-content">
+            <!-- 场景区域 -->
+            <div class="scene-container">
+                <div class="video-container">
+                    <video id="scene-video" autoplay loop muted></video>
+                </div>
+                <audio id="scene-audio" loop></audio>
+                <!-- 聊天气泡区域 -->
+                <div id="chat-bubbles-container"></div>
+            </div>
+            
+            <!-- 右侧控制区域 -->
+            <div class="controls-container">
+                <!-- START按钮 -->
+                <div class="control-section">
+                    <button id="start-button">START</button>
+                </div>
+                
+                <!-- 时间控制器 -->
+                <div class="control-section time-control">
+                    <div id="timer-display">30min</div>
+                    <input type="range" id="timer-slider" min="1" max="60" value="30">
+                    <button id="cancel-button" class="hidden">CANCEL</button>
+                </div>
+                
+                <!-- SCENE 按钮 -->
+                <div class="control-section">
+                    <button id="scene-button">SCENE</button>
+                </div>
+                
+                <!-- SETTING 按钮 -->
+                <div class="control-section">
+                    <button id="setting-button">SETTING</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部聊天区域 -->
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="随时和玛露西尔聊天">
+            <button id="send-button">SEND</button>
+        </div>
+        
+        <!-- 底部署名 -->
+        <div class="footer">
+            <p>MADE BY TS</p>
+        </div>
+    </div>
+    
+    <!-- 场景选择弹窗 -->
+    <div id="scene-modal" class="modal hidden">
+        <div class="modal-content scene-modal-content">
+            <div class="scene-options">
+                <div class="scene-option" data-scene="SNOW">
+                    <div class="scene-preview snow-preview"></div>
+                    <p>SNOW</p>
+                </div>
+                <div class="scene-option" data-scene="SEASIDE">
+                    <div class="scene-preview seaside-preview"></div>
+                    <p>SEASIDE</p>
+                </div>
+                <div class="scene-option" data-scene="RAIN">
+                    <div class="scene-preview rain-preview"></div>
+                    <p>RAIN</p>
+                </div>
+            </div>
+            <button id="scene-close-button" class="close-button">CLOSE</button>
+        </div>
+    </div>
+    
+    <!-- 设置弹窗 -->
+    <div id="settings-modal" class="modal hidden">
+        <div class="modal-content settings-modal-content">
+            <div class="setting-item">
+                <span class="setting-label">VOLUME</span>
+                <input type="range" id="volume-slider" min="0" max="100" value="50">
+            </div>
+            <div class="setting-item">
+                <span class="setting-label">MOTION</span>
+                <div class="toggle-container">
+                    <input type="checkbox" id="motion-toggle" checked>
+                    <label for="motion-toggle"></label>
+                </div>
+            </div>
+            <button id="settings-close-button" class="close-button">CLOSE</button>
+        </div>
+    </div>
+    
+    <script src="src/app.js"></script>
+</body>
+</html> 
