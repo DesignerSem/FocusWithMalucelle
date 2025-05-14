@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'ChillPixels-Matrix';
-    src: url('./assets/fonts/ChillPixels-Matrix.otf') format('otf');
+    src: url('./assets/fonts/ChillPixels-Matrix.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Aa幻梦空间像素体';
-    src: url('./assets/fonts/AaHuanMengKongJianXiangSuTi-2.ttf') format('ttf');
+    src: url('./assets/fonts/AaHuanMengKongJianXiangSuTi-2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
