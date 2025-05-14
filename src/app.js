@@ -475,8 +475,8 @@ function createChatBubble(message) {
     bubble.className = 'chat-bubble typewriter';
 
     // 随机位置
-    const top = Math.floor(Math.random() * 5) + 70;
-    const left = Math.floor(Math.random() * 5 + 5);
+    const top = 76;
+    const left = 4;
     bubble.style.top = `${top}%`;
     bubble.style.left = `${left}%`;
 
