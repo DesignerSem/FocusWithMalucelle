@@ -1,24 +1,28 @@
 @font-face {
     font-family: 'ChillPixels-Matrix';
-    src: url('./assets/fonts/ChillPixels-Matrix.otf') format('opentype'),
-         url('./assets/fonts/ChillPixels-Matrix.woff2') format('woff2');
+    src: url('../assets/fonts/ChillPixels-Matrix.woff2') format('woff2'),
+         url('../assets/fonts/ChillPixels-Matrix.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Aa幻梦空间像素体';
-    src: url('./assets/fonts/AaHuanMengKongJianXiangSuTi-2.ttf') format('truetype'),
-         url('./assets/fonts/Aa幻梦空间像素体.woff2') format('woff2');
+    font-family: 'AaHuanMengKongJian';
+    src: url('../assets/fonts/AaHuanMengKongJian.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'ChillPixels-Matrix', 'Aa幻梦空间像素体', sans-serif;
+}
+
+body, button, input {
+    font-family: 'ChillPixels-Matrix', 'AaHuanMengKongJian', sans-serif;
 }
 
 body {
@@ -132,7 +136,6 @@ body {
 button {
     cursor: pointer;
     transition: transform 0.2s ease;
-    font-family: 'ChillPixels-Matrix';
     padding-bottom: 6px;
 }
 
@@ -173,7 +176,6 @@ button:hover {
 }
 
 #timer-display {
-    font-family: 'ChillPixels-Matrix';
     font-size: 20px;
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
